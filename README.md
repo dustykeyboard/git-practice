@@ -41,6 +41,37 @@ Practicing my `git` commands for branching and merging so I don’t break anythi
 
         git push origin feature/readme-text
 
+## Create a *Fix Branch*
+
+1. Find a bug
+2. Start from `master` branch
+
+        git checkout master && git pull
+
+3. Create *fix branch*
+
+        git checkout -b fix/readme-header
+
+4. Fix the bug
+
+        vi README.md
+
+5. Commit changes to *fix branch*
+
+        git commit -a -m "Change title to Title Case"
+
+6. Push fix branch to GitHub
+
+        git push origin fix/readme-header
+
+7. Create pull request with GitHub web interface
+8. Review changes, tests, etc
+9. Merge pull request
+10. Delete *fix branch*
+11. Switch back to *feature branch*
+
+        git checkout feature/readme-text
+
 ## Update from *Master Branch* and continue working
 
 1. Continue working
@@ -49,9 +80,9 @@ Practicing my `git` commands for branching and merging so I don’t break anythi
 
 2. Get latest from `master`
 
+        git stash
         git checkout master && git pull
         git checkout feature/readme-text
-        git stash
         git rebase -i master
         git stash pop
 
