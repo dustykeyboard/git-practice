@@ -41,3 +41,24 @@ Practicing my `git` commands for branching and merging so I don’t break anythi
 
         git push origin feature/readme-text
 
+## Update from *Master Branch* and continue working
+
+1. Continue working
+
+        vi README.md
+
+2. Get latest from `master`
+
+        git checkout master && git pull
+        git checkout feature/readme-text
+        git stash
+        git rebase -i master
+        git stash pop
+
+3. Commit changes to feature branch
+
+        git commit -a -m "Adding latest from master"
+
+4. Push changes to feature branch on GitHub
+
+        git push origin feature/readme-text
