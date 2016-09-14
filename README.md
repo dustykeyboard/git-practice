@@ -1,4 +1,4 @@
-# git-practice
+# Git Practice
 
 Practicing my `git` commands for branching and merging so I don’t break anything important.
 
