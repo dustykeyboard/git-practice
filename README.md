@@ -19,17 +19,25 @@ Practicing my `git` commands for branching and merging so I don’t break anythi
 
         git push -u origin master
 
-## Making Changes
+## Creating a new *Feature Branch*
 
 1. Start from `master` branch
 
         git checkout master && git pull
 
-2. Create *feature* branch
+2. Create *feature branch*
 
         git checkout -b feature/readme-text
 
 3. Make changes
-4. Push changes to feature branch on GitHub
+
+        vi README.md
+
+4. Commit changes
+
+        git commit -a -m "Updated README text"
+
+5. Push changes to feature branch on GitHub
 
         git push origin feature/readme-text
+
